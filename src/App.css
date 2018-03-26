@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+*{
+    outline: 0;
+}
+
+*:hover {
+    outline: 0;
+}
+a {
+    transition: all .2s ease-in-out;
+}
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+.headline {
+    font-size: 4rem;
+}
+
+.btn-yellow { color: #fff;
+    background-color: #fdc91b;
+}
+.btn-blue,
+.btn-blue-hover:hover { color: #fff;
+    background-color: #0070a6;
+}
+.btn-shadow {
+    box-shadow: 0 8px 0 #eaba19;
+}
+.btn-shadow:hover {
+    box-shadow: 0 8px 0 #093f7f;
+}
+
+.btn-lg {
+    padding: .5rem 2.2rem;
+}
+
+header{
+  background-color: #0070a6;
+}
+header a {
+    color: #fff;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: #fdc91b;
+}
+header .brand{
+  padding: 15px 0;
+}
+header .menu li a {
+  padding: 15px 10px;
+  display: inline-block;
+  font-size: 1.2rem;
+}
+
+header .menu li a:hover,header .menu li a.active{
+  color: #fdc91b;
+}
+@media (max-width: 767px) {
+    .headline {
+        font-size: 3rem;
+    }
+}
