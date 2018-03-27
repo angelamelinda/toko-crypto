@@ -21,11 +21,8 @@ class Currencies extends Component {
   handle_sort = (e) => {
     e.preventDefault();
     var columnName = e.target.dataset.sort;
-    console.log(columnName);
     if(this.state.sortBy.column == columnName) {
-      console.log(this.state.sortBy.sortType);
       var nextSortType = this.state.sortBy.sortType == "desc" ? "asc" : "desc";
-      console.log(nextSortType);
       this.setState({
         sortBy:{
           column:columnName,
@@ -46,13 +43,11 @@ class Currencies extends Component {
   }
 
   componentWillUpdate(nextProps,NextState){
-    console.log(nextProps,NextState);
     this.sortCurrency(nextProps,NextState);
   }
 
   sortCurrency(nextProps,NextState){
     if (NextState.column != "") {
-      console.log("sorting");
       var col = NextState.sortBy.column;
       nextProps.currencies.sort(function(a,b) {
         switch (col) {
@@ -81,7 +76,7 @@ class Currencies extends Component {
 
   componentDidMount() {
     // let callback = ;
-    setInterval(this.props.RequestCurrencyUpdate,5000);
+    setInterval(this.props.RequestCurrencyUpdate,50000);
   }
 
   render() {
