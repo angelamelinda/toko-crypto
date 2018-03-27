@@ -1,12 +1,14 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import { Provider } from 'react-redux';
+import Store from './redux/store';
 
 import Home from './containers/Homepage';
 import CurrencyPage from './containers/Currencies';
 import NotFound from './containers/NotFound';
-import Store from './redux/store';
+import Login from './containers/Login';
 import Header from './components/Header';
+
 class App extends Component {
   componentDidMount() {
         Promise.resolve()
@@ -25,6 +27,7 @@ class App extends Component {
             <Switch>
               <Route path='/' component={Home} exact/>
               <Route path='/currencies' component={CurrencyPage} exact/>
+              <Route path='/login' component={Login} exact/>
               <Route component={NotFound} />
             </Switch>
           </div>

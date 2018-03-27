@@ -17,8 +17,19 @@ body {
 .headline {
     font-size: 4rem;
 }
+button, .btn, input[type="submit"] {
+    border: 0;
+    border-radius: 0.25rem;
+    transition: all .2s ease-in-out;
+}
 
-.btn-yellow { color: #fff;
+button:focus, .btn:focus, input[type="submit"]:focus {
+    box-shadow: 0;
+    outline: 0;
+}
+
+.btn-yellow {
+    color: #fff;
     background-color: #fdc91b;
 }
 .btn-blue,
@@ -36,20 +47,19 @@ body {
     padding: .5rem 2.2rem;
 }
 .btn-transparent {
-  background-color: transparent;
-  border: 0;
-  outline: 0;
+    background-color: transparent;
+    border: 0;
+    outline: 0;
 }
 
-.btn-transparent:focus{
-  box-shadow: 0;
-  outline: 0;
+.btn-medium {
+    padding: .35rem 2rem;
 }
 .cursor-pointer{
-  cursor: pointer;
+    cursor: pointer;
 }
 header{
-  background-color: #0070a6;
+    background-color: #0070a6;
 }
 
 header.transparent {
@@ -70,16 +80,16 @@ header a:hover {
     color: #fdc91b;
 }
 header .brand{
-  padding: 15px 0;
+    padding: 15px 0;
 }
 header .menu li a {
-  padding: 15px 10px;
-  display: inline-block;
-  font-size: 1.2rem;
+    padding: 15px 10px;
+    display: inline-block;
+    font-size: 1.2rem;
 }
 
-header .menu li a:hover,header .menu li a.active{
-  color: #fdc91b;
+header .menu li a:hover, header .menu li a.active{
+    color: #fdc91b;
 }
 @media (max-width: 767px) {
     .headline {

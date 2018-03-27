@@ -93,6 +93,10 @@ class Currencies extends Component {
             <table id="list-currencies">
               <thead className="border-bottom">
                 <tr>
+                  <th className={this.state.sortBy.column == "rank" ? "active" : "" }>
+                    <span>Rank</span>
+                    <button data-sort="rank" onClick={this.handle_sort} className={`dropdown-toggle btn-transparent cursor-pointer float-right ${this.state.sortBy.sortType}`}></button>
+                  </th>
                   <th className={this.state.sortBy.column == "name" ? "active" : "" }>
                     <span>Currency</span>
                     <button data-sort="name" onClick={this.handle_sort} className={`dropdown-toggle btn-transparent cursor-pointer float-right ${this.state.sortBy.sortType}`}></button>
@@ -109,22 +113,18 @@ class Currencies extends Component {
                     <span>Volume(24h)</span>
                     <button data-sort="24h_volume_idr" onClick={this.handle_sort} className={`dropdown-toggle btn-transparent cursor-pointer float-right ${this.state.sortBy.sortType}`}></button>
                   </th>
-                  <th className={this.state.sortBy.column == "rank" ? "active" : "" }>
-                    <span>Rank</span>
-                    <button data-sort="rank" onClick={this.handle_sort} className={`dropdown-toggle btn-transparent cursor-pointer float-right ${this.state.sortBy.sortType}`}></button>
-                  </th>
                   <th></th>
                 </tr>
               </thead>
               <tbody>
                 { this.props.currencies.map((item, index) => (
                   <tr key={index}>
+                    <td>{item.rank}</td>
                     <td>{item.name} ({item.symbol})</td>
                     <td>IDR {Number.parseFloat(item.price_idr).toLocaleString(undefined, { minimumFractionDigits: 0,maximumFractionDigits: 8})}</td>
                     <td>{item.percent_change_24h}%</td>
                     <td>{Number.parseFloat(item["24h_volume_idr"]).toLocaleString(undefined, { minimumFractionDigits: 0,maximumFractionDigits: 8})}</td>
-                    <td>{item.rank}</td>
-                    <td><a href="#" className="btn btn-yellow btn-blue-hover">Beli</a></td>
+                    <td><a href="#" className="btn btn-yellow btn-blue-hover btn-medium">Beli</a></td>
                   </tr>
                 ))}
               </tbody>

@@ -8,12 +8,19 @@ class Header extends Component {
     };
   }
   componentWillMount(){
-    if(this.props.location.pathname === '/'){
-			this.setState({extraClass: 'transparent'});
-		}
+    switch (this.props.location.pathname) {
+      case '/':
+      case '/login':
+        this.setState({extraClass: 'transparent'});
+        break;
+      default:
+        this.setState({extraClass: ''});
+        break;
+    }
     this.props.history.listen(() => {
       switch (this.props.history.location.pathname) {
         case '/':
+        case '/login':
           this.setState({extraClass: 'transparent'});
           break;
         default:
