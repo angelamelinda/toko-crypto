@@ -1,15 +1,13 @@
-import React , { Component } from 'react';
-import Header from '../../components/header';
+import React from 'react';
 
-class Home extends Component {
-  render() {
-    return(
-      <div id="not-found" className="content">
-        <Header/>
+const Home = (props) => {
+  return(
+    <div id="not-found">
+      <div className="content">
         <div className="text-center">Page Not Found</div>
       </div>
-    )
-  }
+    </div>
+  )
 }
 
 export default Home;
