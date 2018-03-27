@@ -1,4 +1,4 @@
-import CurrencyConstant from '../constant/constant';
+import CurrencyConstant from '../constant/constant_currency';
 
 const initialState = { isUpdating: false, isUpdated: false, currencies:[] }
 export function Currency(state = initialState, action) {

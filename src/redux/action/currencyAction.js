@@ -1,4 +1,4 @@
-import CurrencyConstant from '../constant/constant';
+import CurrencyConstant from '../constant/constant_currency';
 import axios from 'axios';
 
 export function RequestCurrencyUpdate(){
