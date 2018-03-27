@@ -1,0 +1,8 @@
+#register-form {
+    max-width: 400px;
+}
+
+#register-form input {
+    width: 100%;
+    padding: 5px 15px;
+}
