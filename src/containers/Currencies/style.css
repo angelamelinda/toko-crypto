@@ -1,0 +1,20 @@
+#list-currencies {
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: 20px;
+}
+#list-currencies th, #list-currencies td {
+    padding: 10px 5px;
+}
+
+#list-currencies th.active .desc:after {
+    transform:  rotate(180deg);
+}
+
+#list-currencies th.active {
+    color: #0070a6;
+}
+
+#list-currencies th.active button:after {
+    color: #0070a6;
+}
