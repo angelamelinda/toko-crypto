@@ -35,10 +35,32 @@ body {
 .btn-lg {
     padding: .5rem 2.2rem;
 }
+.btn-transparent {
+  background-color: transparent;
+  border: 0;
+  outline: 0;
+}
 
+.btn-transparent:focus{
+  box-shadow: 0;
+  outline: 0;
+}
+.cursor-pointer{
+  cursor: pointer;
+}
 header{
   background-color: #0070a6;
 }
+
+header.transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-color: transparent;
+}
+
 header a {
     color: #fff;
 }
