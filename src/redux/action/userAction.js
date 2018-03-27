@@ -9,7 +9,6 @@ export function RequestLogin(credential){
     users = JSON.parse(users);
     console.log(users);
     if(users == undefined || typeof users === "string"){
-      console.log("DISINI");
       users = {};
       return dispatch({type:UserConstant.USER_LOGIN_FAILURE});
     } else {

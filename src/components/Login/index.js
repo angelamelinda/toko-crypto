@@ -15,10 +15,6 @@ class Login extends Component {
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
   }
-  componentDidUpdate() {
-
-  }
-
   handleChange = (e) => {
     const target = e.target;
     const value = target.value;
@@ -35,6 +31,7 @@ class Login extends Component {
       password:this.state.password
     }
     this.props.RequestLogin(credential);
+    console.log(this.props.RequestLogin(credential));
   }
   render(){
     return(
