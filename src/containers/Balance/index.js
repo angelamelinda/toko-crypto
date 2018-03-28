@@ -54,6 +54,7 @@ class Balance extends Component{
                       <th>Jumlah Coin Beli</th>
                       <th>Jumlah Coin Setelah Beli</th>
                       <th>Waktu</th>
+                      <th>Type</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -67,6 +68,7 @@ class Balance extends Component{
                           new Date( item.orderTime ).toLocaleString('id-ID')
                         }
                         </td>
+                        <td className="text-center">{item.orderType}</td>
                       </tr>
                     ))}
                   </tbody>
