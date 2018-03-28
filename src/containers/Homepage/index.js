@@ -14,7 +14,7 @@ class Home extends Component {
               <div className="content-intro text-center text-md-left">
                 <h1 className="headline text-white">Cara Termudah Membeli Bitcoin dan Ethereum</h1>
                 <h5 className="sub-headline text-white font-weight-normal">Toko Crypto adalah tempat yang aman dan mudah untuk membeli mata uang digital seperti Bitcoin dan Ethereum</h5>
-                <Link to="/trade" className="btn btn-lg btn-yellow btn-blue-hover btn-shadow mb-3 mt-3">Pelajari</Link>
+                <Link to="/currencies" className="btn btn-lg btn-yellow btn-blue-hover btn-shadow mb-3 mt-3">Pelajari</Link>
               </div>
             </div>
           </section>
