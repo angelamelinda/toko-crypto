@@ -37,7 +37,7 @@ class Spotlight extends Component {
     return (
       <div className="row mt-4">
         <div className="col-12 mb-4">
-          <h2 className="text-center font-weight-normal">Market Spotlight</h2>
+          <h2 className="text-center font-weight-normal mb-0">Market Spotlight</h2>
         </div>
         <div className="col-12 text-right">
           { this.props.isLoggedIn &&
