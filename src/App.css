@@ -31,14 +31,16 @@ button:focus, .btn:focus, input[type="submit"]:focus {
     outline: 0;
 }
 
-.btn-yellow {
+.btn-yellow,
+.btn-yellow-hover:hover {
     color: #fff;
     background-color: #fdc91b;
 }
 
 .btn-blue,
-.btn-blue-hover:hover { color: #fff;
-    background-color: #0070a6;
+.btn-blue-hover:hover {
+  color: #fff;
+  background-color: #0070a6;
 }
 
 .btn-shadow {
@@ -63,120 +65,68 @@ button:focus, .btn:focus, input[type="submit"]:focus {
     padding: .35rem 2rem;
 }
 
+button[disabled], .btn[disabled], input[type="submit"][disabled] {
+    background-color:  #ababab!important;
+}
+
+
 .cursor-pointer{
     cursor: pointer;
 }
 
-header{
-    background-color: #0070a6;
+.color-red {
+  color: #e00;
 }
 
-header.transparent {
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 3;
-    background-color: transparent;
+.color-green{
+  color: #0ead33;
 }
 
-header a {
-    color: #fff;
+table tbody tr:nth-of-type(even) {
+    background-color: #efefef;
 }
 
-header a:hover {
-    text-decoration: none;
-    color: #fdc91b;
+table td:not(:last-of-type) {
+    border-right: 1px solid #ddd;
 }
 
-header .brand{
-    padding: 15px 0;
+table th {
+  text-align: center;
 }
 
-header .menu li {
-    position: relative;
+input[type="text"], input[type="email"], input[type="password"]{
+  width: 100%;
+  padding: 5px 15px;
 }
 
-header .menu li a {
-    padding: 15px 10px;
-    display: inline-block;
-    font-size: 1.2rem;
+body.modal-open .modal {
+    padding-right: 0!important;
 }
 
-header .menu .active-dropdown li .dropdown {
-    max-height: 1000px;
-    overflow: visible;
-    opacity: 1;
+body.modal-open {
+    padding-right: 0!important;
 }
 
-header .menu li .dropdown {
-    max-height: 0;
-    overflow: hidden;
-    opacity: 0;
-    transition: all .2s ease-in-out;
+@media (max-width: 991px) and (min-width: 576px) {
+  .container {
+    max-width: 90%;
+  }
 }
-
-header .menu li a:hover, header .menu li a.active{
-    color: #fdc91b;
-}
-
-
-header .dropdown {
-    position: absolute;
-    right: 0;
-    top: calc(100% + 5px);
-    min-width: 300px;
-    box-shadow: 0px 0px 2px 1px rgba(0,0,0,.1);
-    background-color: #fff;
-    border-radius: .25rem;
-}
-
-header .dropdown:after {
-    display: inline-block;
-    width: 0;
-    height: 0;
-    content: "";
-    border-top: 0;
-    border-right: 8px solid transparent;
-    border-bottom: 8px solid #fff;
-    border-left: 8px solid transparent;
-    position: absolute;
-    top: -8px;
-    right: 25px;
-}
-
-header .dropdown .tab-content {
-    padding: 30px;
-}
-
-header .nav-tabs .nav-item:first-child .nav-link {
-    border-left: 0;
-}
-
-header .nav-tabs .nav-item:last-child .nav-link {
-    border-right: 0;
-}
-
-header .nav-tabs .nav-item {
-    width: 50%;
-}
-
-header .nav-tabs .nav-link {
+@media (max-width: 991px) {
+  table#list-currencies {
+    display: block;
     width: 100%;
-    text-align: center;
-    color: #ededed;
-    border-top: 0;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
 }
-
-header .nav-tabs .nav-link.active,header .nav-tabs .nav-item.show .nav-link {
-    color: #0070a6;
-}
-
-header .menu .active-dropdown li .dropdown > a:hover {
-    color: #fdc91b;
-}
-
 @media (max-width: 767px) {
+    #balance #list-history table {
+      display: block;
+      width: 100%;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+    }
     .headline {
         font-size: 3rem;
     }
