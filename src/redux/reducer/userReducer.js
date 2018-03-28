@@ -17,7 +17,7 @@ export function User(state = initialState, action) {
     case UserConstant.USER_REGISTER_REQUEST:
       return {...state, isRegistering: true, isLoggedIn: false,}
     case UserConstant.USER_REGISTER_SUCCESS:
-      return {...state, isRegistering: true, isLoggedIn: true, userInformation: action.payLoad}
+      return {...state, isRegistering: true, isLoggedIn: false, userInformation: action.payLoad}
     case UserConstant.USER_REGISTER_FAILURE:
       return {...state, isRegistering: false, isLoggedIn: false,}
     default:
