@@ -170,7 +170,7 @@ class Currencies extends Component {
   }
   componentDidMount() {
     // let callback = ;
-    setInterval(this.props.RequestCurrencyUpdate,1000*15*4);
+    setInterval(this.props.RequestCurrencyUpdate,1000*60*5);
   }
 
   render() {
