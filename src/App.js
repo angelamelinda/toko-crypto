@@ -5,6 +5,7 @@ import Store from './redux/store';
 
 import Home from './containers/Homepage';
 import CurrencyPage from './containers/Currencies';
+import BalancePage from './containers/Balance';
 import NotFound from './containers/NotFound';
 import Header from './components/Header';
 
@@ -26,6 +27,7 @@ class App extends Component {
             <Switch>
               <Route path='/' component={Home} exact/>
               <Route path='/currencies' component={CurrencyPage} exact/>
+              <Route path='/balance' component={BalancePage} exact/>
               <Route component={NotFound} />
             </Switch>
           </div>
