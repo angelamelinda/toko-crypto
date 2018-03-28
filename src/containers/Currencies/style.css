@@ -18,3 +18,77 @@
 #list-currencies th.active button:after {
     color: #0070a6;
 }
+
+#list-currencies td:first-of-type {
+    text-align:  center;
+}
+
+#list-currencies td:nth-of-type(4) {
+    text-align:  center;
+}
+
+#list-currencies td.action {
+    text-align: center;
+}
+
+#form-coin-transaction .modal-body {
+    background-color: #fff;
+}
+
+#form-coin-transaction .nav-tabs {
+    border-bottom: 0;
+}
+
+#form-coin-transaction .nav-tabs .nav-link {
+    border: 0;
+}
+
+#form-coin-transaction .nav-tabs .nav-link.active,#form-coin-transaction .nav-tabs .nav-item.show .nav-link {
+    display: none;
+}
+#form-coin-transaction .nav-tabs .nav-item {
+    width: 80%;
+}
+
+
+#form-coin-transaction .modal-body > div > div {
+    padding: 0 40px;
+}
+
+@media (min-width: 992px){
+  #form-coin-transaction .modal-body > div > div:last-of-type:before {
+      content: 'atau';
+      position: absolute;
+      left: -15px;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: #fff;
+  }
+
+  #form-coin-transaction .modal-body > div > div:last-of-type{
+      border-left: 1px solid #cecece;
+  }
+}
+
+@media (max-width: 991px) {
+  #form-coin-transaction .modal-body > div > div:last-of-type > div {
+      border-top: 1px solid #cecece;
+      padding-top: 20px;
+      margin-top: 40px;
+  }
+
+  #form-coin-transaction .modal-body > div > div:first-of-type {
+      margin-top: 20px;
+  }
+
+  #form-coin-transaction .modal-body > div > div:last-of-type > div:before {
+      content: 'atau';
+      top: 27px;
+      left: 50%;
+      transform: translateX(-50%);
+      position: absolute;
+      background-color: #fff;
+      padding: 0 20px;
+  }
+
+}
