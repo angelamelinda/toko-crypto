@@ -1,11 +1,10 @@
 import React , { Component } from 'react';
 import { NavLink, withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-
 import {RequestLogout} from '../../redux/action/userAction';
-
 import LoginView from '../Login';
-import Register from '../Register';
+import RegisterView from '../Register';
+import './style.css';
 
 class Header extends Component {
   constructor(props){
@@ -17,6 +16,13 @@ class Header extends Component {
   }
   componentDidUpdate(){
     document.querySelectorAll('.menu ul')[0].classList.remove('active-dropdown');
+    { this.props.isFailed ? (
+      document.querySelectorAll('.menu ul')[0].classList.add('active-dropdown')
+    ) : null}
+
+    { this.props.isLoggedIn ? (
+      document.querySelectorAll('.menu ul')[0].classList.remove('active-dropdown')
+    ) : null}
   }
   componentWillMount(){
 
@@ -56,14 +62,18 @@ class Header extends Component {
           <div className="menu">
             <ul className="list-unstyled mb-0">
               <li className="d-inline-block"><NavLink activeClassName="active" to="/currencies" exact>Currencies</NavLink></li>
-                { this.props.isLoggedIn ? (
+              { this.props.isLoggedIn ? (
                 <li className="d-inline-block" >
                   <a href="javascript:void(0)" onClick={this.openDropdown}>Hi, {this.props.userInformation.username}</a>
-                  <div className="dropdown login-form-wrapper">
-                    <a className="d-block cursor-pointer" onClick={this.handleLogout}>Logout</a>
+                  <div className="dropdown loggedin-form-wrapper">
+                    <ul className="list-unstyled mb-0">
+                      <li className="d-block"><div className="balance">Balance IDR <span className="d-block">IDR {this.props.balanceInformation_idr.toLocaleString(undefined, { minimumFractionDigits: 0,maximumFractionDigits: 8})}</span><div className="clearfix"></div></div></li>
+                      <li className="d-block"><NavLink activeClassName="active" to="/balance" exact>Balance</NavLink></li>
+                      <li className="d-block"><a className="d-block cursor-pointer" onClick={this.handleLogout}>Logout</a></li>
+                    </ul>
                   </div>
                 </li>
-                ):(
+              ):(
                 <li className="d-inline-block" >
                   <a href="javascript:void(0)" onClick={this.openDropdown}>Masuk</a>
                   <div className="dropdown login-form-wrapper">
@@ -78,14 +88,15 @@ class Header extends Component {
                     <div className="tab-content">
                       <div id="login" className="tab-pane fade show active" role="tabpanel" aria-labelledby="login-tab">
                         <LoginView/>
+                        { this.props.isFailed ? (<span className="error-message text-center d-block color-red mt-1"><small>Email atau password yang dimasukkan salah</small></span>) : null}
                       </div>
                       <div id="register" className="tab-pane fade" role="tabpanel" aria-labelledby="register-tab">
-                        <Register/>
+                        <RegisterView/>
                       </div>
                     </div>
                   </div>
                 </li>
-                )}
+              )}
             </ul>
           </div>
         </div>
@@ -98,7 +109,9 @@ const mapStateToProps = (state)=> {
   return {
     userInformation: state.User.userInformation,
     isLoggedIn: state.User.isLoggedIn,
-    isLogging: state.User.isLogging
+    isLogging: state.User.isLogging,
+    isFailed: state.User.isFailed,
+    balanceInformation_idr: state.Balance.balanceInformation.balanceIDR,
   }
 }
 const matchDispatchToProps = (dispatch) => {
