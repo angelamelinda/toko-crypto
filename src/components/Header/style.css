@@ -1,0 +1,129 @@
+
+header{
+    background-color: #0070a6;
+}
+
+header.transparent {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 3;
+    background-color: transparent;
+}
+
+header a {
+    color: #fff;
+}
+
+header a:hover {
+    text-decoration: none;
+    color: #fdc91b;
+}
+
+header .brand{
+    padding: 15px 0;
+}
+
+header .menu li {
+    position: relative;
+}
+
+header .menu li a {
+    padding: 15px 10px;
+    display: inline-block;
+    font-size: 1.2rem;
+}
+
+header .menu .active-dropdown li .dropdown {
+    max-height: 1000px;
+    overflow: visible;
+    opacity: 1;
+}
+
+header .menu li .dropdown {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: all .2s ease-in-out;
+}
+
+header .menu li a:hover, header .menu li a.active{
+    color: #fdc91b;
+}
+
+
+header .dropdown {
+    position: absolute;
+    right: 0;
+    top: calc(100% + 5px);
+    min-width: 300px;
+    box-shadow: 0px 0px 2px 1px rgba(0,0,0,.1);
+    background-color: #fff;
+    border-radius: .25rem;
+    z-index: 1;
+}
+
+header .dropdown:after {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    content: "";
+    border-top: 0;
+    border-right: 8px solid transparent;
+    border-bottom: 8px solid #fff;
+    border-left: 8px solid transparent;
+    position: absolute;
+    top: -8px;
+    right: 25px;
+}
+
+header .dropdown .tab-content {
+    padding: 30px;
+}
+
+header .nav-tabs .nav-item:first-child .nav-link {
+    border-left: 0;
+}
+
+header .nav-tabs .nav-item:last-child .nav-link {
+    border-right: 0;
+}
+
+header .nav-tabs .nav-item {
+    width: 50%;
+}
+
+header .nav-tabs .nav-link {
+    width: 100%;
+    text-align: center;
+    color: #ededed;
+    border-top: 0;
+}
+
+header .nav-tabs .nav-link.active,header .nav-tabs .nav-item.show .nav-link {
+    color: #0070a6;
+}
+
+header .menu .active-dropdown li .dropdown > a:hover {
+    color: #fdc91b;
+}
+
+header .dropdown.loggedin-form-wrapper {
+    min-width: 215px;
+}
+
+header .dropdown.loggedin-form-wrapper .balance {
+    padding: 5px 15px;
+}
+
+header .dropdown.loggedin-form-wrapper li a {
+    width: 100%;
+    color: #212529;
+    padding: 5px 15px;
+    font-size: 1rem;
+}
+
+header .dropdown.loggedin-form-wrapper li a:hover {
+    color: #fdc91b;
+}
