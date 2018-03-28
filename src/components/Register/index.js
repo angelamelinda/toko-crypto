@@ -33,6 +33,11 @@ class Register extends Component {
       password:this.state.password
     }
     this.props.RequestRegister(credential);
+    this.setState({
+        email: '',
+        username: '',
+        password: ''
+    });
   }
   render(){
     return(
