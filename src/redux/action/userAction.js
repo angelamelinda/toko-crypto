@@ -1,4 +1,5 @@
 import UserConstant from '../constant/constant_user';
+import BalanceConstant from '../constant/constant_balance';
 import bcrypt from 'bcryptjs';
 
 export function RequestLogin(credential){
@@ -14,6 +15,13 @@ export function RequestLogin(credential){
     } else {
       var userinfo = users[credential.email];
       if (userinfo != undefined && bcrypt.compareSync(credential.password, userinfo.password)) {
+        let balanceInfo = {
+          balanceIDR: 10000000.0,
+          balanceCoin: {},
+          balanceHistory:[]
+        };
+
+        dispatch({type:BalanceConstant.BALANCE_INCREASED,payload:balanceInfo});
         return dispatch({type:UserConstant.USER_LOGIN_SUCCESS, payLoad:userinfo});
       } else {
         return dispatch({type:UserConstant.USER_LOGIN_FAILURE});
