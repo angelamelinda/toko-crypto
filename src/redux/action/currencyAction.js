@@ -6,11 +6,9 @@ export function RequestCurrencyUpdate(){
     dispatch({type:CurrencyConstant.CURRENCY_UPDATING});
     axios.get(`https://api.coinmarketcap.com/v1/ticker/?convert=IDR`)
      .then(resp => {
-       console.log(resp);
        dispatch({type:CurrencyConstant.CURRENCY_UPDATED,payload:resp.data});
      }).catch(resp => {
        dispatch({type:CurrencyConstant.CURRENCY_UPDATED,payload:[]});
-       console.log(resp);
    });
   }
 }

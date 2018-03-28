@@ -12,7 +12,6 @@ class Balance extends Component{
       );
     }
 
-    console.log(Object.keys(balancecoin));
     return (
       <div id="balance">
         <div className="content">

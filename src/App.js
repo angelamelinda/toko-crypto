@@ -10,14 +10,6 @@ import NotFound from './containers/NotFound';
 import Header from './components/Header';
 
 class App extends Component {
-  componentDidMount() {
-        Promise.resolve()
-        .then(() => {
-            this.setState({ loaded: true })
-        }, (err) => {
-            console.log('An error occurred (but not in setState!)', err);
-        });
-    }
   render() {
     return (
       <Provider store={Store}>

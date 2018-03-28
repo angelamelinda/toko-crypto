@@ -8,7 +8,6 @@ export function RequestLogin(credential){
 
     var users = localStorage.getItem('users');
     users = JSON.parse(users);
-    console.log(users);
     if(users == undefined || typeof users === "string"){
       users = {};
       return dispatch({type:UserConstant.USER_LOGIN_FAILURE});
@@ -44,7 +43,6 @@ export function RequestRegister(credential){
       users = {};
     }
     credential.password = bcrypt.hashSync(credential.password,10);
-    console.log(users);
     var mail = credential.email;
     users[mail] = {
       email:credential.email,

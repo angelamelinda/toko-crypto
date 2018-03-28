@@ -17,7 +17,6 @@ class Register extends Component {
       this.handleSubmit = this.handleSubmit.bind(this);
   }
   handleChange = (e) => {
-    console.log(e);
     const target = e.target;
     const value = target.value;
     const name = target.name;

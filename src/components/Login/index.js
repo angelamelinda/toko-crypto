@@ -31,7 +31,6 @@ class Login extends Component {
       password:this.state.password
     }
     this.props.RequestLogin(credential);
-    console.log(this.props.RequestLogin(credential));
   }
   render(){
     return(

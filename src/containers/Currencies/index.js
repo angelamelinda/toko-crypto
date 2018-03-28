@@ -115,7 +115,6 @@ class Currencies extends Component {
         [name] : value
       }
     })
-    console.log(this.state);
   }
   handleBuySubmit(e){
     e.preventDefault();

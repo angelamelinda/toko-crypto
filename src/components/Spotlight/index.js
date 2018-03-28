@@ -10,16 +10,6 @@ class Spotlight extends Component {
 
     }
   }
-  componentDidUpdate(){
-    console.log(this.state);
-  }
-  componentDidMount(){
-    console.log(this.state);
-  }
-  componentWillMount(nextProps,NextState){
-    console.log(nextProps);
-    // this.sortAndSliceCurrency(nextProps,NextState);
-  }
   componentWillUpdate(nextProps,NextState){
     this.sortAndSliceCurrency(nextProps,NextState);
   }
