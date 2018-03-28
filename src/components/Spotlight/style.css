@@ -1,0 +1,11 @@
+table.table-spotlight {
+    width: 100%;
+}
+
+.table-spotlight th, .table-spotlight td {
+    padding: 10px 5px;
+}
+
+.table-spotlight td:last-of-type {
+    text-align: center;
+}
