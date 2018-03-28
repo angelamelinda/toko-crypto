@@ -127,3 +127,13 @@ header .dropdown.loggedin-form-wrapper li a {
 header .dropdown.loggedin-form-wrapper li a:hover {
     color: #fdc91b;
 }
+@media (max-width: 400px) {
+  header .menu li a {
+    padding: 15px 4px;
+  }
+
+  header .brand h2 {
+      font-size: 1.4rem;
+  }
+
+}
