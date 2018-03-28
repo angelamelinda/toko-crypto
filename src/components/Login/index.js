@@ -38,7 +38,7 @@ class Login extends Component {
       <form id="login-form" onSubmit={this.handleSubmit}>
         <input className="mb-3" type="email" placeholder="Email" name="email" onChange={this.handleChange} value={this.state.email}/>
         <input className="mb-3" type="password" placeholder="Password" name="password" onChange={this.handleChange} value={this.state.password}/>
-        <button className="btn-yellow btn-blue-hover btn-medium w-100">Masuk</button>
+        <button className="btn-yellow btn-blue-hover btn-medium w-100 cursor-pointer">Masuk</button>
       </form>
     )
   }
@@ -48,7 +48,8 @@ const mapStateToProps = (state)=> {
   return {
     userInformation: state.User.userInformation,
     isLoggedIn: state.User.isLoggedIn,
-    isLogging: state.User.isLogging
+    isLogging: state.User.isLogging,
+    isFailed: state.User.isFailed,
   }
 }
 

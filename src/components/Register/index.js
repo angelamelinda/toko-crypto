@@ -41,7 +41,7 @@ class Register extends Component {
         <input className="mb-3" type="username" placeholder="Username" name="username" onChange={this.handleChange} value={this.state.username}/>
         <input className="mb-3" type="email" placeholder="Email" name="email" onChange={this.handleChange} value={this.state.email}/>
         <input className="mb-3" type="password" placeholder="Password" name="password" onChange={this.handleChange} value={this.state.password}/>
-        <button className="btn-yellow btn-blue-hover btn-medium w-100">Daftar</button>
+        <button className="btn-yellow btn-blue-hover btn-medium w-100 cursor-pointer">Daftar</button>
       </form>
     )
   }
